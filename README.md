@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/asr/pdfname.svg?branch=master)](https://travis-ci.org/asr/pdfname)
+
 pdfname
 =======
 
