@@ -1,10 +1,14 @@
+{-# LANGUAGE CPP               #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE UnicodeSyntax     #-}
 
 module Main where
 
-import Data.Char    ( toUpper )
+import Data.Char ( toUpper )
+
+#if __GLASGOW_HASKELL__ <= 708
 import Data.Functor ( (<$>) )
+#endif
 
 import Data.Text ( Text )
 import qualified Data.Text as T
