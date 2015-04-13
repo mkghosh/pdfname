@@ -3,6 +3,7 @@
 # See also https://github.com/hvr/multi-ghc-travis for more information
 
 env:
+  - CABALVER=1.22 GHCVER=7.10.1
   - CABALVER=1.22 GHCVER=7.8.4
 
 # Note: the distinction between `before_install` and `install` is not
@@ -16,6 +17,7 @@ install:
   - cabal --version
   - ghc --version
   - travis_retry cabal update
+  - cabal install cpphs
   - cabal install --only-dependencies
 
 # Here starts the actual work to be performed for the package under
@@ -31,3 +33,4 @@ script:
 branches:
   only:
     - master
+    - travis

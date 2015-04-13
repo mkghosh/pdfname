@@ -8,7 +8,8 @@ Maintainer:          Andrés Sicard-Ramírez <asr@eafit.edu.co>
 Category:            Text
 Build-type:          Simple
 Cabal-version:       >= 1.2
-Tested-with:         GHC == 7.8.4
+Tested-with:         GHC == 7.10.1
+                     GHC == 7.8.4
 
 Executable pdfname
   main-is:        Main.hs
