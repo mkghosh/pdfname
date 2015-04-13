@@ -1,0 +1,35 @@
+Name:                pdfname
+Version:             0.1
+Synopsis:            Name a PDF file using the information from the pdfinfo command
+License:             BSD3
+License-file:        LICENSE
+Author:              Andrés Sicard-Ramírez
+Maintainer:          Andrés Sicard-Ramírez <asr@eafit.edu.co>
+Category:            Text
+Build-type:          Simple
+Cabal-version:       >= 1.2
+Tested-with:         GHC == 7.8.4
+
+Executable pdfname
+  main-is:        Main.hs
+  hs-source-dirs: src
+
+  build-depends:
+    base        >= 4.7.0.2 && < 4.8
+    , directory >= 1.2.1.0 && < 1.4
+    , filepath  >= 1.3.0.2 && < 1.4
+    , pdfinfo   >= 1.5.4   && < 1.6
+    , text      >= 1.2.0.4 && < 1.3
+
+  if impl(ghc >= 7.8)
+     ghc-options:
+       -Wall
+       -fwarn-auto-orphans
+       -fwarn-identities
+       -fwarn-incomplete-record-updates
+       -fwarn-incomplete-uni-patterns
+       -fwarn-missing-import-lists
+       -fwarn-missing-local-sigs
+       -fwarn-monomorphism-restriction
+       -fwarn-tabs
+       -Werror
