@@ -1,0 +1,2 @@
+hlint :
+	hlint src/

@@ -13,7 +13,7 @@ import Data.Functor ( (<$>) )
 import Data.Text ( Text )
 import qualified Data.Text as T
 
-import Control.Monad  ( replicateM, unless )
+import Control.Monad  ( replicateM, unless, void )
 
 import System.Directory   ( copyFile )
 import System.Environment ( getArgs, getProgName )
@@ -48,7 +48,7 @@ ifM c m m' = do
 
 -- | @unless_@ is just @Control.Monad.unless@ with a more general type.
 unless_ ∷ Monad m ⇒ Bool → m a → m ()
-unless_ b m = unless b $ m >> return ()
+unless_ b m = unless b $ void m
 
 unlessM ∷ Monad m ⇒ m Bool → m a → m ()
 unlessM c m = c >>= (`unless_` m)
@@ -60,8 +60,7 @@ failureMsg ∷ String → IO ()
 failureMsg err = getProgName >>= \p → hPutStrLn stderr $ p ++ ": " ++ err
 
 replace ∷ [(Text,Text)] → Text → Text
-replace []       ys = ys
-replace (x : xs) ys = replace xs $ uncurry T.replace x ys
+replace xs ys = foldl (flip (uncurry T.replace)) ys xs
 
 onlyFirstLetterUpperCase ∷ Text → Text
 onlyFirstLetterUpperCase xs =
