@@ -47,10 +47,18 @@ ifM c m m' = do
   if b then m else m'
 
 -- | @unless_@ is just @Control.Monad.unless@ with a more general type.
+#if __GLASGOW_HASKELL__ >= 710
 unless_ ∷ Monad m ⇒ Bool → m a → m ()
+#else
+unless_ ∷ (Functor m, Monad m) ⇒ Bool → m a → m ()
+#endif
 unless_ b m = unless b $ void m
 
+#if __GLASGOW_HASKELL__ >= 710
 unlessM ∷ Monad m ⇒ m Bool → m a → m ()
+#else
+unlessM ∷ (Functor m, Monad m) ⇒ m Bool → m a → m ()
+#endif
 unlessM c m = c >>= (`unless_` m)
 
 ------------------------------------------------------------------------------
