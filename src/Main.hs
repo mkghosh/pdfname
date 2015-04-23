@@ -120,30 +120,30 @@ titleReplacements ∷ [(Text,Text)]
 titleReplacements =
   [ ("<Emphasis Type=\"Italic\">0 </Emphasis>", "0")
   , (":",        ".")
-  , ("/",        "-")
-  , ("(",        "")
-  , (")",        "")
-  , (" ",        "-")
-  , (",",        "")
-  , ("'",        "")
-  , ("[",        "")
-  , ("]",        "")
-  , ("?",        "")
-  , ("!",        "")
-  , ("ü",        "u")
-  , ("&#955;",   "lambda") -- Symbol λ.
-  , ("&#x00DC;", "U")      -- Symbol Ü.
-  , ("&#x00F6;", "o")      -- Symbol ö.
-  , ("&#x00FC;", "u")      -- Symbol ü.
-  , ("&#x03BB;", "lambda") -- Symbol λ.
-  , ("&#x2014;", ".")      -- em dash character '—'.
-  , ("algol",    "Algol")
-  , ("church",   "Church")
-  , ("coq",      "Coq")
-  , ("goles",    "Goles")
-  , ("kleene",   "Kleene")
-  , ("lesbegue", "Lesbegue")
-  , ("twelf",    "Twelf")
+  , ("/",         "-")
+  , ("(",         "")
+  , (")",         "")
+  , (" ",         "-")
+  , (",",         "")
+  , ("'",         "")
+  , ("[",         "")
+  , ("]",         "")
+  , ("?",         "")
+  , ("!",         "")
+  , ("ü",         "u")
+  , ("&#955;",    "lambda") -- Symbol λ.
+  , ("&#x00DC;",  "U")      -- Symbol Ü.
+  , ("&#x00F6;",  "o")      -- Symbol ö.
+  , ("&#x00FC;",  "u")      -- Symbol ü.
+  , ("&#x03BB;",  "lambda") -- Symbol λ.
+  , ("&#x2014;",  ".")      -- em dash character '—'.
+  , ("algol",     "Algol")
+  , ("church",    "Church")
+  , ("coq",       "Coq")
+  , ("goles",     "Goles")
+  , ("kleene",    "Kleene")
+  , ("lesbegue",  "Lesbegue")
+  , ("twelf",     "Twelf")
   ]
 
 getTitle ∷ Text → Text
@@ -151,8 +151,8 @@ getTitle xs =
   if T.null xs
   then defaultValue
   else
-    ( onlyFirstLetterUpperCase
-      . replace titleReplacements
+    ( replace titleReplacements
+      . onlyFirstLetterUpperCase
     ) xs
 
 generateFileName ∷ PDFInfo → FilePath
