@@ -143,6 +143,7 @@ titleReplacements =
   , ("goles",     "Goles")
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
+  , ("stoughton", "Stoughton")
   , ("twelf",     "Twelf")
   ]
 
