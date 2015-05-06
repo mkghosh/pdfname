@@ -137,6 +137,7 @@ titleReplacements =
   , ("&#x00FC;",  "u")      -- Symbol ü.
   , ("&#x03BB;",  "lambda") -- Symbol λ.
   , ("&#x2014;",  ".")      -- em dash character '—'.
+  , ("agda",      "Agda")
   , ("algol",     "Algol")
   , ("church",    "Church")
   , ("coq",       "Coq")
