@@ -141,6 +141,7 @@ titleReplacements =
   , ("algol",     "Algol")
   , ("church",    "Church")
   , ("coq",       "Coq")
+  , ("curry",     "Curry")
   , ("goles",     "Goles")
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
