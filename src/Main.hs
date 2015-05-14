@@ -143,10 +143,12 @@ titleReplacements =
   , ("coq",       "Coq")
   , ("curry",     "Curry")
   , ("goles",     "Goles")
+  , ("haskell",   "Haskell")
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
   , ("stoughton", "Stoughton")
   , ("twelf",     "Twelf")
+  , ("utrecht",    "Utrecht")
   ]
 
 getTitle ∷ Text → Text
