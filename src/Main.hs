@@ -147,6 +147,8 @@ titleReplacements =
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
   , ("stoughton", "Stoughton")
+  , ("tff1",      "TFF1")
+  , ("tptp",      "TPTP")
   , ("twelf",     "Twelf")
   , ("utrecht",    "Utrecht")
   ]
