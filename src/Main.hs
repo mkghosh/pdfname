@@ -131,6 +131,7 @@ titleReplacements =
   , ("?",         "")
   , ("!",         "")
   , ("ü",         "u")
+  , ("&#246;",    "o")      -- Symbol ö.
   , ("&#955;",    "lambda") -- Symbol λ.
   , ("&#x00DC;",  "U")      -- Symbol Ü.
   , ("&#x00F6;",  "o")      -- Symbol ö.
@@ -146,11 +147,12 @@ titleReplacements =
   , ("haskell",   "Haskell")
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
+  , ("sat",       "SAT")
   , ("stoughton", "Stoughton")
   , ("tff1",      "TFF1")
   , ("tptp",      "TPTP")
   , ("twelf",     "Twelf")
-  , ("utrecht",    "Utrecht")
+  , ("utrecht",   "Utrecht")
   ]
 
 getTitle ∷ Text → Text
