@@ -152,6 +152,7 @@ titleReplacements =
   , ("tff1",      "TFF1")
   , ("tptp",      "TPTP")
   , ("twelf",     "Twelf")
+  , ("turing",    "Turing")
   , ("utrecht",   "Utrecht")
   ]
 
