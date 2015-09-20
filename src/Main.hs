@@ -147,6 +147,7 @@ titleReplacements =
   , ("haskell",   "Haskell")
   , ("kleene",    "Kleene")
   , ("lesbegue",  "Lesbegue")
+  , ("ramsey",    "Ramsey")
   , ("sat",       "SAT")
   , ("stoughton", "Stoughton")
   , ("tff1",      "TFF1")
